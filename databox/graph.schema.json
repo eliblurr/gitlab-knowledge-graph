@@ -1,0 +1,92 @@
+{
+    "nodes": {
+        "User": {
+            "properties": [
+                "id",
+                "username",
+                "name",
+                "state",
+                "created_at",
+                "last_activity_on",
+                "confirmed_at",
+                "last_sign_in_at",
+                "namespace_id"
+            ]
+        },
+        "Group": {
+            "properties": [
+                "id",
+                "name",
+                "description",
+                "path",
+                "visibility",
+                "full_name",
+                "full_path",
+                "parent_id"
+            ]
+        },
+        "Project": {
+            "properties": [
+                "id",
+                "name",
+                "description",
+                "name_with_namespace",
+                "created_at",
+                "namespace",
+                "tag_list",
+                "topics",
+                "default_branch",
+                "path_with_namespace"
+            ]
+        },
+        "Namespace": {
+            "properties": [
+                "id",
+                "name",
+                "path",
+                "kind",
+                "full_path"
+            ]
+        }
+    },
+    "relationships": {
+        "BELONGS_TO": {
+            "properties": [
+                "name"
+            ]
+        },
+        "OWNS": {
+            "properties": [
+                "name"
+            ]
+        },
+        "IN_GROUP": {
+            "properties": [
+                "name"
+            ]
+        },
+        "CONTAINS": {
+            "properties": [
+                "name"
+            ]
+        },
+        "HAS_REPO": {
+            "properties": [
+                "name"
+            ]
+        },
+        "EVENTS": {
+            "properties": [
+                "id",
+                "title",
+                "target_id",
+                "author_id",
+                "project_id",
+                "author_username",
+                "created_at",
+                "action_name",
+                "target_type"
+            ]
+        }
+    }
+}
